@@ -1,4 +1,16 @@
 export const add = (a, b) => {
+    if (typeof a !== 'number') {
+        a = Number(a)
+    }
+
+    if (typeof b !== 'number') {
+        b = Number(b)
+    }
+
+    if (isNaN(a) || isNaN(b)) {
+        throw new Error()
+    }
+
     return a + b
 };
 

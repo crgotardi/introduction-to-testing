@@ -5,6 +5,18 @@ describe('add', () => {
     it('should add two positive numbers', () => {
         expect(add(2, 2)).toBe(4)
     })
+
+    it('should add two negative numbers', () => {
+        expect(add(-2, -2)).toBe(-4)
+    })
+
+    it('should parse strings into numbers', () => {
+        expect(add('2', '2')).toBe(4)
+    })
+
+    it('should throw error when get not numbers', () => {
+        expect(() => add(2, 'potato')).toThrow()
+    })
 });
 
 describe('subtract', () => {
