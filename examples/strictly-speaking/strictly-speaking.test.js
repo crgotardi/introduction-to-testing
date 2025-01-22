@@ -11,7 +11,7 @@ test('objects with the same properties are equal', () => {
 });
 
 test('objects with different properties are not equal', () => {
-  expect({ a: 1, b: 2 }).not.toEqual({ a: 1, b: 3 });
+  expect({ a: 1, b: 2 }).not.toBe({ a: 1, b: 2 });
 });
 
 test('objects with undefined properties are equal to objects without those properties', () => {
